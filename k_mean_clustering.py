@@ -66,7 +66,7 @@ class KMeansVisualization:
         self.update_speed_buttons()
         
         # Create matplotlib figure and axis for plotting
-        self.fig, self.ax = plt.subplots(figsize=(12, 10))
+        self.fig, self.ax = plt.subplots(figsize=(10, 8))
         # Adjust layout to accommodate legend below the plot
         self.fig.subplots_adjust(bottom=0.2)
         # Embed the plot in the Tkinter window
@@ -320,7 +320,7 @@ class KMeansVisualization:
                 self.ax.text(mid_x, mid_y, f'{dist:.1f}', fontsize=8, color=line_color)
             
             # Add annotation explaining the argmin process
-            self.ax.text(10, 580, f'Point {self.current_point_idx} assigned to Cluster {min_idx}\n(Shortest distance: {np.sqrt(distances[min_idx]):.1f})',
+            self.ax.text(6, 520, f'Point {self.current_point_idx} assigned to Cluster {min_idx}\n(Shortest distance: {np.sqrt(distances[min_idx]):.1f})',
                         bbox=dict(facecolor='white', alpha=0.8), fontsize=8)
         
         # Set plot limits
